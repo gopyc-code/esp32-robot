@@ -1,2 +1,2 @@
 # mirp
-A MicroPython program for operating ESP32-based robots. It fits any robotic transporters with even number of wheels and single-servo grip. Control is carried out using BLE technology.
+A MicroPython program for operating ESP32-based robots. It is compatible with any robotic transporters with an even number of wheels and a single-servo grip. Control is conducted using BLE technology. 
