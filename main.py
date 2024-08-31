@@ -70,8 +70,8 @@ class Motor(object):
         self.pwm2.duty(max(self.pwm2.duty() - self.dif, self.MIN_ADC))
         
     def stop(self):
-        self.pwm2.duty(MIN_ADC)
-        self.pwm1.duty(MIN_ADC)
+        self.pwm2.duty(self.MIN_ADC)
+        self.pwm1.duty(self.MIN_ADC)
 
 
 class Chassis(object):
@@ -127,11 +127,7 @@ class Chassis(object):
         
         if code in CODES_CONTROL.keys():
             self.timer.deinit()
-            self.timer.init(
-                mode=Timer.PERIODIC,
-                period=self.per,
-                callback=CODES_CONTROL[code]
-            )
+            self.timer.init(mode=Timer.PERIODIC, period=self.per, callback=CODES_CONTROL[code])
 
 
 class Handler(object):
